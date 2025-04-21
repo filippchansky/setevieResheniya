@@ -1,0 +1,94 @@
+.card {
+  max-width: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logoSection {
+  display: flex;
+  max-height: 205px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  object-fit: cover; /* Сохраняет пропорции, обрезая лишнее */
+  object-position: top;
+}
+
+.veganIcon {
+  position: absolute;
+  top: 25px;
+  right: 17px;
+
+}
+
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 15px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  color: #aaaaaa;
+  line-height: 140%;
+}
+
+.type {
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ededed;
+  border-radius: 80px;
+}
+
+.typeBtn {
+  text-align: center;
+  max-width: 142px;
+  border-radius: 80px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 17px 36.5px;
+}
+
+.typeBtn.active {
+  border: 1px solid #ededed;
+  background-color: #ededed;
+}
+
+.orderSection {
+  margin: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 39px;
+}
+
+.price {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.orderBtn {
+  max-width: 162px;
+  width: 100%;
+  background-color: #ea5f0a;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 17px 15.5px;
+  border-radius: 80px;
+}

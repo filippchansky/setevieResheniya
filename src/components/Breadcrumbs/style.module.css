@@ -1,0 +1,12 @@
+.breadcrumbsLink {
+  font-weight: 400;
+  font-size: 14px;
+  color: #575757;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbsLink {
+    font-size: 12px;
+  }
+}

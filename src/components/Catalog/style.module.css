@@ -1,0 +1,40 @@
+.main {
+    width: 100%;
+}
+
+.container {
+    max-width: 1425px;
+    margin: 0 auto;
+    padding: 74px 79px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 54px;
+    color: #064087;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 74px 40px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .title {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 74px 10px;
+    }
+}
