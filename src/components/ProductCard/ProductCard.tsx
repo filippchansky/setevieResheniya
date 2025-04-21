@@ -10,7 +10,7 @@ const ProductCard: React.FC<IProps> = ({ data }) => {
   return (
     <div className={style.card}>
       <div className={style.logoSection}>
-        <img className={style.logo} src={data.icon} width={305} height={205} alt='' />
+        <img className={style.logo} src={data.icon} width={305} height={205} alt='Иконка товара' />
         {data.vegan && (
             <img className={style.veganIcon} src="icons/vegan.svg" alt="Без глютена" />
         )}

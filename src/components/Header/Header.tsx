@@ -15,7 +15,7 @@ const Header: React.FC = () => {
             </p>
           </div>
           <div className={style.basket}>
-            <img src='icons/basket.svg' width={34} height={34} alt='' />
+            <img src='icons/basket.svg' width={34} height={34} alt='корзина' />
           </div>
         </div>
       </div>

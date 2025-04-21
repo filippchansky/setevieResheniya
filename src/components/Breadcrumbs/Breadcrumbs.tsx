@@ -10,7 +10,7 @@ const Breadcrumbs: React.FC<IProps> = ({ routes }) => {
     <>
       <div>
         {routes.map((item, index) => (
-          <a className={style.breadcrumbsLink} key={item}>
+          <a href='#' className={style.breadcrumbsLink} key={item}>
             {item}
             {index !== routes.length - 1 && ' / '}
           </a>
