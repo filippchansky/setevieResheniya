@@ -1,23 +1,63 @@
 import React from 'react';
 import style from './style.module.css';
+import SignIn from '../SignIn/SignIn';
+import { auth } from '@/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar, Button, Popover, Spin } from 'antd';
+import { signOut } from 'firebase/auth';
 
 const Header: React.FC = () => {
+  const [user, loading, error] = useAuthState(auth);
+  console.log(user, loading, error);
+
+  const logOut = async () => {
+    await signOut(auth);
+  };
   return (
     <header className={style.header}>
       <div className={style.container}>
         <button className={style.logo}>
           <p className={style.logoText}>Лого</p>
         </button>
-        <div className={style.basketSection}>
-          <div className={style.numberSection}>
-            <p className={style.number}>
-              +7 (812) <span>944-44909</span>
-            </p>
+
+        {user && (
+          <div className={style.basketSection}>
+            <div className={style.emailSection}>
+              <Popover
+                placement='bottom'
+                title={user.email}
+                content={
+                  <>
+                    <Button color='danger' variant='outlined' onClick={logOut}>
+                      Выйти
+                    </Button>
+                  </>
+                }
+              >
+                <Avatar size={50} icon={<UserOutlined />} style={{ backgroundColor: '#ea5f0a' }} />
+              </Popover>
+            </div>
+            <button className={style.basket}>
+              <img src='icons/basket.svg' width={34} height={34} alt='корзина' />
+            </button>
           </div>
-          <div className={style.basket}>
-            <img src='icons/basket.svg' width={34} height={34} alt='корзина' />
+        )}
+        {loading && (
+          <div className={style.emailSection}>
+            <Spin />
           </div>
-        </div>
+        )}
+        {!user && !loading && (
+          <div className={style.signInSection}>
+            <SignIn />
+          </div>
+        )}
+        {/* {user ? (
+          
+        ) : (
+          
+        )} */}
       </div>
     </header>
   );

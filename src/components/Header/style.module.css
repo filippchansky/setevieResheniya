@@ -35,6 +35,18 @@
     gap: 26px;
 }
 
+.emailSection {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.signInSection {
+    display: flex;
+    align-items: center;
+}
+
 .numberSection {
     display: flex;
     align-items: center;
